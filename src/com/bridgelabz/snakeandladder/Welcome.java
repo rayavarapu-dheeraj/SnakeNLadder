@@ -6,6 +6,7 @@ public class Welcome {
 	static final int NO_PLAY = 0;
 	static final int LADDER = 1;
 	static final int SNAKE = 2;
+	static int diceCount;
 
 	public static void main(String[] args) {
 		System.out.println("Welcome to Snake And Ladder game");
@@ -18,6 +19,7 @@ public class Welcome {
 			int dice = (int) (Math.random() * 6) + 1;
 			System.out.println("Dice roll: " + dice);
 			int checkOption = (int) (Math.random() * 3);
+			diceCount++;
 
 			switch (checkOption) {
 
@@ -45,5 +47,6 @@ public class Welcome {
 			}
 			System.out.println("Position: " + position);
 		}
+		System.out.println("Total dice roll count: " + diceCount);
 	}
 }
